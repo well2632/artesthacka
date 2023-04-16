@@ -1,14 +1,20 @@
-<header>
+<!DOCTYPE html>
+<html>
 
-    <script src="https://cdn.jsdelivr.net/npm/@mediarithmics/ar.js@^3.3.1/dist/mar.js"></script>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo AR.js</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediarithmics/ar.js@3.3.3/dist/mar.js"></script>
+</head>
 
-<body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
+<body>
+    <a-scene embedded arjs="trackingMethod: best;">
         <a-marker preset="hiro">
-            <a-entity position="0 0 0" scale="0.5 0.5 0.5" geometry="primitive: box" material="color: red"></a-entity>
+            <a-box position='0 0.5 0' material='color: red;'></a-box>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
-
 </body>
+
+</html>
